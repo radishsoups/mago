@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js"></script>
+  <script src="sketch.js"></script>
+  <script src="witch.js"></script>
+  <script src="shrub.js"></script>
+  <script src="furniture.js"></script>
+
+  <style>
+    @font-face {
+      font-family: font;
+      src: url(fonts/headliner/HeadlinerNo45-59y8.ttf);
+    }
+
+    h1 {
+      font-family: font;
+      color: #A9BBAC;
+      text-align: center;
+      letter-spacing: 0.5em;
+    }
+
+    p {
+      font-family: font;
+      text-align: center;
+      letter-spacing: 0.12em;
+      font-size: 0.8em;
+    }
+
+    body {
+      /* overflow: hidden; */
+      background: #001a17;
+      background-image: url('images/index.png');
+      background-repeat: repeat-x;
+      background-attachment: fixed;
+      background-position: center top;
+    }
+
+    #container {
+      margin: auto;
+      text-align: center;
+    }
+
+    #instructions {
+      margin: auto;
+      text-align: center;
+      width: 80%;
+      color: #A9BBAC;
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    // disabling user scrolling with arrow keys
+    // source code: https://stackoverflow.com/questions/8916620/disable-arrow-key-scrolling-in-users-browser
+    window.addEventListener("keydown", function (e) {
+      if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+      }
+    }, false);
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <h1>MAGO</h1>
+    <div id="container" class="container"></div>
+  </div>
+
+  <div id="instructions">
+    <p>Use the arrow keys to move around. Collect chicken eggs, wood, and water to survive. Explore the map
+      carefully—some things may be hiding from you.</p>
+  </div>
+</body>
+
+</html>
